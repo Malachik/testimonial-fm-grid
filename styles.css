@@ -1,0 +1,417 @@
+:root {
+  /* =====================
+     Layout
+  ====================== */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  /* =====================
+     Colors – Primary
+  ====================== */
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+
+  /* =====================
+     Colors – Neutral
+  ====================== */
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+
+  /* =====================
+     Typography
+  ====================== */
+  --font-family-base: "Barlow Semi Condensed", sans-serif;
+
+  --font-size-body-13px: 0.8125rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* =====================
+     Font Families
+  ====================== */
+  --font-barlow-medium: "Barlow Semi Condensed", sans-serif;
+  --font-barlow-semibold: "Barlow Semi Condensed", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+
+  /* =====================
+     Typography Presets
+  ====================== */
+  /* text-preset-1: Barlow Semi Condensed Semibold */
+  --text-preset-1-font: var(--font-barlow-semibold);
+  --text-preset-1-weight: 600; /* Semibold */
+  --text-preset-1-size-20px: 1.25rem;
+  --text-preset-1-line-height: 1.2;
+  --text-preset-1-letter-spacing: 0px;
+
+  /* text-preset-2: Barlow Semi Condensed Medium */
+  --text-preset-2-font: var(--font-barlow-medium);
+  --text-preset-2-weight: 500; /* Medium */
+  --text-preset-2-size-11px: 0.6875rem;
+  --text-preset-2-line-height: 1.1;
+  --text-preset-2-letter-spacing: 0px;
+
+  /* text-preset-3: Barlow Semi Condensed Medium */
+  --text-preset-3-font: var(--font-barlow-medium);
+  --text-preset-3-weight: 500;
+  --text-preset-3-size-13px: 0.8125rem;
+  --text-preset-3-line-height: 1.4;
+  --text-preset-3-letter-spacing: 0px;
+
+  /* text-preset-4: Barlow Semi Condensed Medium */
+  --text-preset-4-font: var(--font-barlow-medium);
+  --text-preset-4-weight: 500;
+  --text-preset-4-size-20px: 1.25rem;
+  --text-preset-4-line-height: 1.2;
+  --text-preset-4-letter-spacing: 0px;
+
+  /* text-preset-5: DM Sans Regular */
+  --text-preset-5-font: var(--font-dm-sans);
+  --text-preset-5-weight: 400; /* Regular */
+  --text-preset-5-size-16px: 1rem;
+  --text-preset-5-line-height-18px: 1.125rem;
+  --text-preset-5-letter-spacing: 0px;
+
+  /* =====================
+     Spacing Scale
+  ====================== */
+  --space-500-40px: 2.5rem;
+  --space-400-32px: 2rem;
+  --space-300-24px: 1.5rem;
+  --space-200-16px: 1rem;
+  --space-100-8px: 0.5rem;
+  --space-50-4px: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: var(--font-size-body-13px);
+  font-family: var(--font-barlow-medium);
+  line-height: 1.4;
+  background-color: var(--grey-100);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-barlow-semibold);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+p {
+  font-family: var(--font-dm-sans);
+  font-size: var(--text-preset-5-size-16px);
+  line-height: 1.5;
+}
+
+.grid__container {
+  padding: 6% 3%;
+}
+
+.grid__card {
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.grid__container {
+  padding: 2.5rem 1.5rem;
+  min-height: 100vh;
+  display: grid;
+  gap: var(--space-200-16px);
+  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card-1"
+    "card-2"
+    "card-3"
+    "card-4"
+    "card-5";
+}
+
+.card-1 {
+  background-color: var(--purple-500);
+  color: var(--white);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 20%;
+}
+
+.card-2 {
+  background-color: var(--grey-500);
+  color: var(--white);
+}
+.card-3 {
+  background-color: rgb(243, 239, 230);
+  color: var(--grey-400);
+}
+
+.card-4 {
+  background-color: var(--dark-blue);
+  color: var(--grey-200);
+}
+.card-5 {
+  background-color: rgb(243, 239, 230);
+}
+
+.gray-400 {
+  color: var(--grey-400);
+}
+
+.gray-500 {
+  color: var(--grey-500);
+}
+/* STYLES SECTION */
+
+.card__img {
+  width: 1.5625rem;
+  height: auto;
+  border-radius: 50%;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-200-16px);
+}
+
+.header__description {
+  font-size: var(--text-preset-2-size-11px);
+  line-height: 1.1;
+  letter-spacing: 0;
+  color: var(--purple-50);
+}
+
+.header__title {
+  font-size: var(--text-preset-3-size-13px);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 0.3rem;
+}
+
+.card__content {
+  display: grid;
+  gap: var(--space-200-16px);
+}
+
+.card__lead {
+  margin-top: 1rem;
+  --text-preset-1-size-20px: 1.25rem;
+  font-size: var(--text-preset-1-size-20px);
+  line-height: var(--text-preset-1-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+  font-family: var(--font-weight-medium);
+}
+
+.card__quote {
+  font-size: var(--text-preset-3-size-13px);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  line-height: 1.4;
+  color: var(--purple-50);
+}
+
+/* .text-wrap {
+  font-size: 1.246rem;
+} */
+
+.color-grag-400 {
+  color: var(--grey-400);
+}
+
+.gray-100 {
+  color: var(--grey-200);
+}
+.gray-500 {
+  color: var(--grey-500);
+}
+.gray-400 {
+  color: var(--grey-400);
+}
+
+/* MEDIA QUARRY--------------------- */
+
+/* xs */
+@media (min-width: 375px) {
+  .grid__container {
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card-1"
+      "card-2"
+      "card-3"
+      "card-4"
+      "card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+  .card-2 {
+    grid-area: card-2;
+  }
+  .card-3 {
+    grid-area: card-3;
+  }
+  .card-4 {
+    grid-area: card-4;
+  }
+  .card-5 {
+    grid-area: card-5;
+  }
+}
+
+.grid__card {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  text-align: start;
+}
+
+/* .grid__container {
+  display: grid;
+  max-inline-size: 1200px;
+  margin-inline: auto;
+} */
+
+@media (min-width: 647px) {
+  .grid__container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card-1 card-1"
+      "card-2 card-3"
+      "card-4 card-4"
+      "card-5 card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+  .card-2 {
+    grid-area: card-2;
+  }
+  .card-3 {
+    grid-area: card-3;
+  }
+  .card-4 {
+    grid-area: card-4;
+  }
+  .card-5 {
+    grid-area: card-5;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid__container {
+    width: 80%;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card-1 card-1"
+      "card-2 card-3"
+      "card-4 card-4"
+      "card-5 card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+  .card-2 {
+    grid-area: card-2;
+  }
+  .card-3 {
+    grid-area: card-3;
+  }
+  .card-4 {
+    grid-area: card-4;
+  }
+  .card-5 {
+    grid-area: card-5;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid__container {
+    width: 90%;
+    height: 100vh;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card-1 card-1 card-2 card-5"
+      "card-3 card-4 card-4 card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+  .card-2 {
+    grid-area: card-2;
+  }
+  .card-3 {
+    grid-area: card-3;
+  }
+  .card-4 {
+    grid-area: card-4;
+  }
+  .card-5 {
+    grid-area: card-5;
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid__container {
+    width: 80%;
+    height: 100vh;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card-1 card-1 card-2 card-5"
+      "card-3 card-4 card-4 card-5";
+  }
+
+  .card-1 {
+    grid-area: card-1;
+  }
+  .card-2 {
+    grid-area: card-2;
+  }
+  .card-3 {
+    grid-area: card-3;
+  }
+  .card-4 {
+    grid-area: card-4;
+  }
+  .card-5 {
+    grid-area: card-5;
+  }
+}
